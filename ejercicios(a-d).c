@@ -76,3 +76,38 @@ int main(int argc, char * argv[]){
 return 0;
 }
 }
+
+int main() {
+    while(1) {
+int opcion;
+puts("Seleccione una opcion:\n");
+puts("1. Determina los numeros, si son negativos o positivos");
+puts("2. Determina el numero si es par o impar");
+puts("3. Determina si el numero es multiplo de 3 o 2");
+puts("4. Determina cual de los 3 numeros a ingresar es mayor");
+puts("5. Salir");
+puts("\nOpcion:\n");
+scanf("%d", &opcion);
+
+switch(opcion) {
+case 1:
+    opcion 1();
+    break;
+case 2:
+    opcion 2();
+    break;
+case 3:
+    opcion 3();
+    break;
+case 4:
+    opcion 4();
+    break;
+case 5:
+    system("clear");
+    puts("saliendo del programa");
+    return 0;
+default:
+   puts("Seleccione una opcion correcta");
+   }
+}
+return 0;
