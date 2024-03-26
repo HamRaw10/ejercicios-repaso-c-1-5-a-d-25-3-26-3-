@@ -1,7 +1,8 @@
-//Ejercicio 1
+
 #include <stdio.h>
 #include <stdlib.h>
 
+void ejercicio_a(){
 int main(int argc, char * argv[]){
     int A atoi(atof[1]);
 
@@ -11,14 +12,10 @@ int main(int argc, char * argv[]){
     else(
         printf(" Es negativo");
     );
-
-return 0;
+ }
 }
 
-//Ejercicio 2
-#include <stdio.h>
-#include <stdlib.h>
-
+void ejercicio_b(){
 int main(int argc, char * argv[]){
     int A;
     scanf("%i", &A);
@@ -30,13 +27,10 @@ int main(int argc, char * argv[]){
     else{
         printf("No es par")
     }
-return 0;
+ }
 }
 
-//Ejercicio 3
-#include <stdio.h>
-#include <stdlib.h>
-
+ejercicio_c(){
 int main(int argc, char * argv[]){
     int A;
     scanf("%i", &A);
@@ -58,10 +52,9 @@ int main(int argc, char * argv[]){
     
 return 0;
 }
+}
 
-#include <stdio.h>
-#include <stdlib.h>
-
+ejercicio_d(){
 int main(int argc, char * argv[]){
     int A, B, C;
     scanf("%i %i %i", &A, &B, &C);
@@ -81,4 +74,5 @@ int main(int argc, char * argv[]){
     printf(" El tercer numero es mayor");
    }
 return 0;
+}
 }
