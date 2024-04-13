@@ -1,113 +1,101 @@
-
 #include <stdio.h>
-#include <stdlib.h>
 
-void ejercicio_a(){
-int main(int argc, char * argv[]){
-    int A atoi(atof[1]);
-
-    if(A > 0)(
-        printf(" Es positivo");
-    )
-    else(
-        printf(" Es negativo");
-    );
- }
-}
-
-void ejercicio_b(){
-int main(int argc, char * argv[]){
-    int A;
-    scanf("%i", &A);
-    printf("Ingrese Su numero: %i", A);
-
-    if(A % 2 == 0){
-        printf("Es par")
-    }
-    else{
-        printf("No es par")
-    }
- }
-}
-
-ejercicio_c(){
-int main(int argc, char * argv[]){
-    int A;
-    scanf("%i", &A);
-    printf("Ingrese Su numero: %i", A);
-
-    
-    if(A % 3 == 0 && A % 2 == 0){
-        printf(" Su numero es multiplo de 2 y 3");
-    }
-    else if(A % 3 == 0){
-        printf(" Su numero es multiplo de 3");
-    }
-    else if(A % 2 == 0){
-        printf(" Su numero es multiplo de 2");
-    }
-    else{
-        printf(" Su numero no es multiplo ni de 2 ni de 3");
-    }
-    
-return 0;
-}
-}
-
-ejercicio_d(){
-int main(int argc, char * argv[]){
-    int A, B, C;
-    scanf("%i %i %i", &A, &B, &C);
-    printf("Ingrese SuS 3 numeros: %i %i %i", A, B, C);
-
-    
-   if(A > B && A > C){
-        printf(" El primer numero es mayor");
-   }
-   else if(A > B && C > A){
-    printf(" El tercer numero es mayor");
-   }
-   else if(B > A && B > C){
-    printf(" El segundo numero es mayor");
-   } 
-   else{
-    printf(" El tercer numero es mayor");
-   }
-return 0;
-}
-}
+// Prototipos de las funciones de los ejercicios
+void ejercicio_a();
+void ejercicio_b();
+void ejercicio_c();
+void ejercicio_d();
 
 int main() {
-    while(1) {
-int opcion;
-puts("Seleccione una opcion:\n");
-puts("1. Determina los numeros, si son negativos o positivos");
-puts("2. Determina el numero si es par o impar");
-puts("3. Determina si el numero es multiplo de 3 o 2");
-puts("4. Determina cual de los 3 numeros a ingresar es mayor");
-puts("5. Salir");
-puts("\nOpcion:\n");
-scanf("%d", &opcion);
+    char opcion;
 
-switch(opcion) {
-case 1:
-    opcion 1();
-    break;
-case 2:
-    opcion 2();
-    break;
-case 3:
-    opcion 3();
-    break;
-case 4:
-    opcion 4();
-    break;
-case 5:
-    system("clear");
-    puts("saliendo del programa");
+    // Solicitar al usuario que elija un ejercicio
+    printf("Seleccione un ejercicio (Numero positivo o negativo(A), Saber si su numero es par o inpar(B), Saber si su numero es divisible por 2 o/y 3(C), Saber cual numero es mayor(D)): ");
+    scanf(" %c", &opcion);
+
+    // Evaluar la opción seleccionada por el usuario
+    switch (opcion) {
+        case 'A':
+        case 'a':
+            ejercicio_a(); // Llamar a la función del ejercicio A
+            break;
+        case 'B':
+        case 'b':
+            ejercicio_b(); // Llamar a la función del ejercicio B
+            break;
+        case 'C':
+        case 'c':
+            ejercicio_c(); // Llamar a la función del ejercicio C
+            break;
+        case 'D':
+        case 'd':
+            ejercicio_d(); // Llamar a la función del ejercicio D
+            break;
+        default:
+            printf("Opción no válida.\n"); // Manejar una opción no válida
+            break;
+    }
+
     return 0;
-default:
-   puts("Seleccione una opcion correcta");
-   }
 }
-return 0;
+
+// Definición de las funciones de los ejercicios
+
+void ejercicio_a() {
+    int A;
+    printf("Ingrese un número para el ejercicio A: ");
+    scanf("%d", &A);
+
+    if (A > 0) {
+        printf("El número ingresado es positivo.\n");
+    } else if (A < 0) {
+        printf("El número ingresado es negativo.\n");
+    } else {
+        printf("El número ingresado es cero.\n");
+    }
+}
+
+void ejercicio_b() {
+    int num;
+    printf("Ingrese un número para el ejercicio B: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0) {
+        printf("El número ingresado es par.\n");
+    } else {
+        printf("El número ingresado es impar.\n");
+    }
+}
+
+void ejercicio_c() {
+    int num;
+    printf("Ingrese un número para el ejercicio C: ");
+    scanf("%d", &num);
+
+    if (num % 3 == 0 && num % 2 == 0) {
+        printf("El número ingresado es divisible por 2 y por 3.\n");
+    } else if (num % 3 == 0) {
+        printf("El número ingresado es divisible solo por 3.\n");
+    } else if (num % 2 == 0) {
+        printf("El número ingresado es divisible solo por 2.\n");
+    } else {
+        printf("El número ingresado no es divisible ni por 2 ni por 3.\n");
+    }
+}
+
+void ejercicio_d() {
+    int num1, num2, num3;
+    printf("Ingrese tres números para el ejercicio D: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    if (num1 > num2 && num1 > num3) {
+        printf("El primer número es el mayor.\n");
+    } else if (num2 > num1 && num2 > num3) {
+        printf("El segundo número es el mayor.\n");
+    } else if (num3 > num1 && num3 > num2) {
+        printf("El tercer número es el mayor.\n");
+    } else {
+        printf("Al menos dos números son iguales o todos son iguales.\n");
+    }
+}
+
